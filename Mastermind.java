@@ -20,7 +20,6 @@ public class Mastermind
             System.out.println("WELCOME TO MASTERMIND, DEAR CHALLENGER!!!!");
             available = new ColorOrder(colorList);
             toBeGuessedlist = available.makeColorCode();
-            System.out.println(toBeGuessedlist);
 
             for (String i: toBeGuessedlist)
             {
@@ -32,12 +31,9 @@ public class Mastermind
                 toBeGuessedPermanent.add(k);
             }
 
-            System.out.println(toBeGuessedPermanent);
-
             for (int i = 1; i <=10; i++)
             {
                 guessList = guessed();
-                System.out.println("to be guessed List: " + toBeGuessedlist);
                 int counter = 0;
                 System.out.println("Attempt number: " + i);
                 
