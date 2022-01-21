@@ -3,6 +3,8 @@ import java.util.Arrays;
 import java.util.Scanner;
 import Graphics.*;
 
+// The bug is that if you have all no marks or 1 white mark, it gives 2 temporary,
+
 public class Mastermind
 {
     private static ArrayList<String> colorList = new ArrayList<>(Arrays.asList("purple", "blue", "red", "orange", "yellow", "green"));
@@ -31,6 +33,7 @@ public class Mastermind
                 toBeGuessedPermanent.add(k);
             }
 
+            System.out.println("To be guessed: " + toBeGuessedPermanent);
             for (int i = 1; i <=10; i++)
             {
                 guessList = guessed();
@@ -41,7 +44,6 @@ public class Mastermind
                 {
                     GuessedCopy.add(j);
                 }
-    
                 System.out.println("Current guess: " + guessList);
                 ArrayList<String> listOfResults = Result(guessList, toBeGuessedlist);
                 ArrayList<String> checkOfResults = CheckForResult(GuessedCopy, toBeGuessedCopy);
